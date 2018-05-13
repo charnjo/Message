@@ -30,7 +30,7 @@ public class MessageController {
   private MessageRepository messageRepository;
 
   
-  @PostMapping("/post/message")
+  @PostMapping("/add/message")
   public ResponseEntity<Message> postMessage(@RequestBody Message addedMessage) {
 
 	  Message message = messageService.addMessage(addedMessage);
@@ -44,7 +44,7 @@ public class MessageController {
 	}
   
   
-  @PutMapping("put/{msgId}")
+  @PutMapping("modify/{msgId}")
   public ResponseEntity<String> modifyMessage(@PathVariable Long msgId, @RequestBody Message modMessage){
     	
     	Optional<Message> msgOptional = messageRepository.findById(msgId);
