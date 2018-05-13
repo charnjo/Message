@@ -1,7 +1,7 @@
 # Message
 Message API
 
-Database = H2
+Database = H2 (embedded)
 
 ENDPOINTS:
 1.	Creating a message : Post (localhost:8080/add/message)
